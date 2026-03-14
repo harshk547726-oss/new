@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Home - Disease Prediction{% endblock %}
+{% block content %}
+<section class="p-5 mb-4 bg-body-tertiary rounded-3 hero-card">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">AI-Powered Disease Prediction System</h1>
+    <p class="col-md-8 fs-5">Get fast preliminary disease insights by selecting symptoms. Built with Flask, MySQL, and Scikit-learn.</p>
+    <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg me-2">Get Started</a>
+    <a href="{{ url_for('main.about') }}" class="btn btn-outline-secondary btn-lg">Learn More</a>
+  </div>
+</section>
+{% endblock %}

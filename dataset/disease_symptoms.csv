@@ -1,0 +1,16 @@
+fever,cough,headache,fatigue,nausea,skin_rash,joint_pain,sore_throat,shortness_of_breath,disease
+1,1,1,1,0,0,0,1,0,Flu
+0,1,0,1,0,0,0,1,1,Common Cold
+1,0,1,1,1,0,0,0,0,Dengue
+0,0,0,1,1,1,1,0,0,Allergy
+1,1,0,1,0,0,1,0,1,COVID-19
+0,1,1,0,0,0,0,1,0,Sinusitis
+1,0,1,1,1,0,1,0,0,Typhoid
+0,0,0,0,1,1,0,0,0,Food Poisoning
+1,1,1,1,0,0,0,0,1,Pneumonia
+0,0,1,1,1,0,1,0,0,Arthritis Flare
+1,1,0,1,0,0,0,1,1,Bronchitis
+0,0,1,0,0,1,0,0,0,Dermatitis
+1,0,0,1,1,0,0,0,0,Malaria
+0,1,1,1,0,0,0,1,0,Viral Fever
+1,0,0,1,0,0,1,0,0,Chikungunya

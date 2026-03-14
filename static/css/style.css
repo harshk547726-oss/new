@@ -1,0 +1,6 @@
+body { transition: background-color .3s ease, color .3s ease; }
+.hero-card { border: 1px solid rgba(0,0,0,0.05); }
+.card, .btn { transition: transform .2s ease, box-shadow .2s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 0.6rem 1.2rem rgba(0,0,0,0.08); }
+.btn:hover { transform: translateY(-1px); }
+.stat-card { background: linear-gradient(135deg, #0d6efd, #6ea8fe); color: #fff; }
