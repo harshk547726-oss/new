@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}Prediction History{% endblock %}
+{% block content %}
+<div class="card p-4"><h3>Your Prediction History</h3>
+<table class="table table-striped"><thead><tr><th>Date</th><th>Disease</th><th>Confidence</th></tr></thead><tbody>
+{% for r in records %}<tr><td>{{ r.created_at.strftime('%Y-%m-%d %H:%M') }}</td><td>{{ r.predicted_disease }}</td><td>{{ r.confidence }}%</td></tr>{% else %}<tr><td colspan="3">No history found.</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}

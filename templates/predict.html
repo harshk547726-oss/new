@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Predict{% endblock %}
+{% block content %}
+<div class="card p-4 shadow-sm">
+  <h3>Disease Prediction</h3>
+  <p>Select symptoms and submit for analysis.</p>
+  <input class="form-control mb-3" id="symptomSearch" placeholder="Search symptoms...">
+  <form id="predictionForm" class="row g-2">
+    {% for symptom in symptom_order %}
+    <div class="col-md-4 symptom-item">
+      <label class="form-check-label"><input class="form-check-input me-2" type="checkbox" name="{{ symptom }}">{{ symptom.replace('_', ' ').title() }}</label>
+    </div>
+    {% endfor %}
+    <div class="col-12 mt-3"><button class="btn btn-primary">Predict Disease</button></div>
+  </form>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/predict.js') }}"></script>
+{% endblock %}

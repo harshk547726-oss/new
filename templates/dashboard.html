@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="row g-4">
+  <div class="col-md-4"><div class="card p-3 stat-card"><h5>Total Predictions</h5><h2>{{ prediction_count }}</h2></div></div>
+  <div class="col-md-8"><div class="card p-3"><canvas id="trendChart" height="110"></canvas></div></div>
+  <div class="col-12"><div class="card p-3"><h5>Recent Predictions</h5>
+    <ul class="list-group">
+      {% for item in latest_predictions %}
+      <li class="list-group-item d-flex justify-content-between"><span>{{ item.predicted_disease }}</span><small>{{ item.created_at.strftime('%Y-%m-%d %H:%M') }}</small></li>
+      {% else %}<li class="list-group-item">No predictions yet.</li>{% endfor %}
+    </ul>
+  </div></div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+window.renderTrendChart({{ chart_labels|tojson }}, {{ chart_values|tojson }});
+</script>
+{% endblock %}
